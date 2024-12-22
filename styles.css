@@ -1,0 +1,216 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F9FAFB;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #001F54, #002966); /* Navy blue gradient */
+    color: #fff;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    background-color: #222;
+    color: #fff;
+    margin-top: auto;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Main Layout Styling */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Graph Container */
+#graph-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #001F54; /* Navy blue border */
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Controls Section */
+#controls {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+#controls h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #001F54; /* Navy blue underline */
+    padding-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #001F54; /* Navy blue focus */
+    box-shadow: 0 0 5px rgba(0, 31, 84, 0.3);
+}
+
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Ensure even spacing between buttons */
+    gap: 20px; /* Space between buttons */
+    padding: 20px;
+    width: 100%; /* Take full width */
+    box-sizing: border-box;
+}
+
+button {
+    flex: 0 1 50px; /* This ensures buttons do not grow larger than 180px */
+    max-width: 50px; /* Set the maximum width */
+    padding: 12px 0; /* Adjust padding for uniform height */
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #001F54, #002966); /* Navy blue gradient */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block; /* Ensures buttons are inline */
+    min-width: 180px; /* Prevent buttons from being smaller than 180px */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #002966, #003B80); /* Darker navy hover effect */
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: 3px solid #80bdff;
+    outline-offset: 2px;
+}
+
+/* Priority Queue Section */
+#priority-queue {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+#priority-queue h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 5px;
+}
+
+#queueList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#queueList li {
+    background-color: #f1f8e9;
+    border: 1px solid #c8e6c9;
+    color: #2e7d32;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    #graph-container {
+        width: 100%;
+    }
+}
